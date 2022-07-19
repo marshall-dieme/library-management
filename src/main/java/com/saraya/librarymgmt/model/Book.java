@@ -19,7 +19,7 @@ public class Book extends BaseModel{
     @ManyToOne
     private Genre genre;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Author author;
 
     @OneToMany

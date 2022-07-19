@@ -1,9 +1,6 @@
 package com.saraya.librarymgmt.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @MappedSuperclass
 public abstract class BaseModel {
@@ -12,6 +9,7 @@ public abstract class BaseModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+
     public long getId() {
         return id;
     }
@@ -19,4 +17,5 @@ public abstract class BaseModel {
     public void setId(long id) {
         this.id = id;
     }
+
 }
